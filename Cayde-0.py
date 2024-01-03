@@ -187,7 +187,6 @@ if __name__ == '__main__':
             speak(pyjokes.get_joke())
 
         elif "calculate" in query:
-            # TODO: credentials.WOLFRAM_ID
             app_id = credentials.WOLFRAM_ID
             client = wolframalpha.Client(app_id)
             index = query.lower().split().index('calculate')
@@ -338,7 +337,6 @@ if __name__ == '__main__':
             speak(assistantName)
 
         elif "weather" in query:
-            # TODO: google open weather website to get api of open weather
             api_key = credentials.WEATHER_API_KEY
             base_url = "http://api.openweathermap.org / data / 2.5 / weather?"
             speak(" City name ")
@@ -361,7 +359,6 @@ if __name__ == '__main__':
                 speak(" City Not Found ")
 
         elif "send message " in query:
-            # TODO: Create Twilio account
             account_sid = credentials.TWILIO_SID
             auth_token = credentials.TWILIO_TOKEN
             client = Client(account_sid, auth_token)
